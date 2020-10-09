@@ -235,7 +235,7 @@ the lifetime of a single transaction, so we need to provide an `FDBRecordContext
 
 ```java
 Function<FDBRecordContext, FDBRecordStore> recordStoreProvider = context -> FDBRecordStore.newBuilder()
-        .setMetaDataProvider(recordMetaData)
+        .setMetaDataProvider(metaDataBuilder)
         .setContext(context)
         .setKeySpacePath(path)
         .createOrOpen();
